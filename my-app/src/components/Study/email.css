@@ -1,0 +1,14 @@
+.rent {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+    font-family: Poppins, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+      'Liberation Sans', sans-serif;
+    position: absolute;
+    right: 657px;
+    top: 661px;
+    width: min-content;
+    height: min-content;
+    white-space: nowrap;
+    flex-direction: column;
+  }

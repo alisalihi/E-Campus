@@ -6,21 +6,30 @@ import { Ellipse4Icon } from './Ellipse4Icon';
 import { Group1Icon } from './Group1Icon';
 import { Line2Icon } from './Line2Icon';
 import classes from './Transport.module.css';
+import { Link, BrowserRouter as Router } from 'react-router-dom';
 
 interface Props {
   className?: string;
 }
+const handleStudyClick = () => {
+  // Replace '/your-new-path' with the path you want to redirect to
+  window.location.href = './Donations/Donations.tsx';
+};
 /* @figmaId 118:187 */
-export const Transport: FC<Props> = memo(function Transport(props = {}) {
+export const Transport: FC<Props> = memo(function Transport(props = {}) { 
   return (
     <div className={`${resets.clapyResets} ${classes.root}`}>
       <div className={classes.rectangle1}></div>
       <div className={classes.rectangle2}></div>
-      <div className={classes.study}>Study</div>
-      <div className={classes.sharing}>Sharing</div>
-      <div className={classes.green}>Green</div>
-      <div className={classes.tools}>Tools</div>
-      <div className={classes.eCampus}>e-Campus</div>
+      <div className={classes.study} onClick={handleStudyClick}>
+      <a href="./Donations/Donations.tsx" target="_blank" rel="noopener noreferrer">
+        Study
+      </a>
+    </div>      <div className={classes.sharing}>Sharing</div>
+    <div className={classes.study}><Link to="/study">Study</Link></div>
+      <div className={classes.sharing}><Link to="/sharing">Sharing</Link></div>
+      <div className={classes.green}> <Link to="/donations">Donations</Link></div>
+      <div className={classes.tools}><Link to="/transport">Transport</Link></div>
       <div className={classes.rectangle37}></div>
       <div className={classes.rectangle4}></div>
       <div className={classes.group1}>
